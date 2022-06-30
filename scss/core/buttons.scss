@@ -1,0 +1,114 @@
+// Style for button and pseudo button for input and link
+
+.btn {
+	color: $color_white;
+	font-family: $main_font_family;
+	font-weight: 600;
+	font-size: 0.715em;
+	padding: 1.25em 6.25em 1.25em 3.5em;
+
+	border: none;
+	outline: none;
+	text-decoration: none;
+	display: inline-block;
+	background-color: $main_color;
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
+	cursor: pointer;
+	border-radius: 3em;
+	transition: 0.3s;
+	transition-property: background color border-color;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+
+	@media (min-width: 992px) {
+		width: inherit;
+		font-size: 1em;
+		padding: 1.7em 4.5em 1.8125em 3.5em;
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		font-size: 0.875em;
+		width: 16em;
+		line-height: 1.5;
+
+		&:after {
+			content: '\e904';
+			font-family: 'icomoon';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%)rotate(-45deg);
+			right: -1.5em;
+			font-size: 2em;
+
+			@media (min-width: 992px) {
+				font-size: 1.5em;
+				transition: transform 0.3s;
+
+			}
+		}
+	}
+
+	&_horizon {
+		span {
+			&:after {
+				right: -0.5em;
+				transform: translateY(-50%)rotate(0);
+			}
+		}
+	}
+
+	&:hover {
+		background-color: lighten($main_color, 5%);
+
+		@media (min-width: 992px) {
+			span {
+				&:after {
+					transform: translateY(-50%)rotate(315deg);
+				}
+			}
+
+		}
+
+	}
+
+	&:active,
+	&:focus {
+		background-color: lighten($main_color, 0);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	&_success {
+		background-color: $color_success;
+
+		&:hover {
+			background-color: lighten($color_success, 5%);
+		}
+
+		&:active,
+		&:focus {
+			background-color: lighten($color_success, 0);
+		}
+	};
+
+	&_warning {
+		background-color: $color_warning;
+
+		&:hover {
+			background-color: lighten($color_warning, 5%);
+		}
+
+		&:active,
+		&:focus {
+			background-color: lighten($color_warning, 0);
+		}
+	};
+}

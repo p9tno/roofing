@@ -1,0 +1,387 @@
+/* Header
+ ----------------------------------------------------------------------------- */
+.header {
+	position: absolute;
+	width: 100%;
+	@media (min-width: 992px) {
+		padding: 2.75em 0 3.25em;
+
+	}
+
+	&__wrap {
+		@extend .container_center;
+		margin: auto;
+	}
+
+	&__toggle {
+		position: absolute;
+
+		@media (max-width: 991px) {
+			top: 1.8125em;
+			right: 1.375em;
+			width: 1.375em;
+			height: 0.875em;
+			color: $main_color;
+			border: 0.125em solid;
+			border-left: 0;
+			border-right: 0;
+			z-index: 51;
+			cursor: pointer;
+
+			&:after,
+			&:before {
+				content: '';
+				display: inline-block;
+				border-top: 0.125em solid;
+
+				position: absolute;
+				top: 50%;
+				// выровнить псевдо эл. по центру: половина от толщины border
+				margin-top: -0.0625em;
+				left: 0;
+				width: 100%;
+				transition: transform 0.2s;
+
+			}
+
+			&.active {
+				border-top-color: transparent;
+				border-bottom-color: transparent;
+
+				&:before {
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+
+			&_open {
+				border: 0;
+				position: fixed;
+
+				&:after,
+				&:before {
+					content: '';
+					border-top: 0.125em solid $main_color;
+				}
+
+				&:before {
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
+	}
+
+	&__nav {
+		padding-bottom: 2em;
+
+		@media (min-width: 992px) {
+			padding-bottom: 2.375em;
+			border-bottom: 1px solid rgba($main_color, 0.125);
+		}
+	}
+
+	&__bottom {
+		text-align: center;
+		@media (min-width: 992px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__desc {
+		text-align: center;
+		line-height: 0.875;
+		margin-bottom: 1em;
+
+		span {
+			font-size: 0.5em;
+		}
+
+		@media (min-width: 992px) {
+			line-height: 1.125;
+			margin-bottom: 0;
+			max-width: 12.875em;
+
+			span {
+				font-size: 0.75em;
+			}
+
+		}
+	}
+
+	&__price {
+		position: relative;
+		margin-bottom: 1em;
+
+		@media (min-width: 992px) {
+			margin-bottom: 0;
+		}
+
+		a {
+			position: relative;
+			text-decoration: none;
+			font-size: 0.625em;
+			color: $main_color;
+
+			@media (min-width: 992px) {
+				font-size: 0.75em;
+
+			}
+		}
+
+		&:before {
+			content: 'Pdf';
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 3.655em;
+			height: 3.655em;
+			margin-right: 1.45em;
+			background-color: $color_white;
+			border-radius: 50%;
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+
+			font-size: 0.75em;
+			color: $color_success;
+
+		}
+
+	}
+
+	&__logo {
+		position: fixed;
+		top: 0;
+		left: 1.375em;
+
+		width: 4.6875em;
+		height: 3.25em;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (min-width: 992px) {
+			position: static;
+			top: auto;
+			left: auto;
+			width: 17.2501em;
+			height: 9.3756em;
+		}
+	}
+
+	&__social {
+		text-align: center;
+	}
+
+	&__action {
+		text-align: center;
+		position: fixed;
+		top: 0;
+		left: 7.5em;
+		line-height: 1;
+		background-color: #EDF2F5;
+
+		@media (min-width: 992px) {
+			background-color: transparent;
+			position: static;
+			top: auto;
+			left: auto;
+			line-height: $main_line_height;
+		}
+	}
+
+	&__schedule {
+		margin-bottom: 0.25em;
+		letter-spacing: 0.02em;
+
+		b,
+		span {
+			font-size: 0.4375em;
+		}
+
+		@media (min-width: 992px) {
+			margin-bottom: 0.375em;
+
+			b,
+			span {
+				font-size: 0.75em;
+			}
+
+		}
+
+	}
+
+	&__phone {
+		letter-spacing: 0.05em;
+
+		a {
+			text-decoration: none;
+			color: $main_color;
+			font-size: 0.875em;
+			font-weight: 600;
+			@media (min-width: 992px) {
+				font-size: 1.375em;
+
+			}
+		}
+
+	}
+
+	&__feedback {
+		.feedback__link {
+			font-size: 0.625em;
+			/* 10/16 */
+			font-weight: 600;
+			color: $color_success;
+			text-decoration: none;
+			cursor: pointer;
+			letter-spacing: 0.05em;
+
+			@media (min-width: 992px) {
+				font-size: 0.75em;
+
+			}
+
+		}
+
+	}
+}
+
+@media (max-width: 991px) {
+	.header__content {
+		position: fixed;
+		left: -20em;
+		top: 0;
+		bottom: 0;
+		background-color: #EDF2F5;
+		width: 20em;
+		/* 320/16 */
+		z-index: 10;
+		overflow: hidden;
+		padding: 5.5em 1.375em 2.5em;
+		transition: left 0.2s;
+		height: 100%;
+		overflow-y: auto;
+
+		&_open {
+			left: 0;
+		}
+	}
+}
+
+.nav-open {
+	overflow: hidden;
+}
+
+.navbar {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		text-align: center;
+
+		@media (min-width: 992px) {
+			text-align: initial;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+	}
+
+	&__item {
+		letter-spacing: 0.05em;
+
+		i {
+			font-size: 2.125em;
+		}
+
+		margin-bottom: 1.25em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (min-width:992px) {
+			margin-bottom: 0;
+
+			i {
+				font-size: 1.375em;
+			}
+
+		}
+
+		&.current {
+			a {
+				color: $color_warning;
+			}
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		font-size: 0.625em;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: $main_color;
+
+		@media (min-width: 992px) {
+			font-size: $main_font_size;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -0.25em;
+				left: 50%;
+				width: 0;
+				opacity: 0;
+				border-bottom: 0.0625em solid;
+				border-color: $color_warning;
+				transition: 0.3s;
+			}
+
+			&:hover {
+				&:after {
+					left: 0;
+					width: 100%;
+					opacity: 1;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.dotted {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -0.5em;
+		left: 0;
+		display: block;
+		width: 100%;
+		border-bottom: 0.25em dotted $color_success;
+
+		@media (min-width: 992px) {
+			bottom: -0.375em;
+		}
+
+	}
+
+}

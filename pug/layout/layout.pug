@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+
+        link(rel="stylesheet", type="text/css", href="css/style.css")
+    body
+        .wrapper
+            include header.pug
+
+            main.main_content
+                block content
+
+            //- include footer.pug
+
+            // Begin Modal feedback
+            .modal.fade.feedback#feedback
+                .modal-dialog
+                    .modal-content
+                        a(href="#" class="modal-close" data-dismiss="modal")
+                        .modal-header
+                            .modal-title 
+                                span Быстро оставить заявку
+                            .modal-subtitle
+                                span Введите номер, мы позвоним вам в течение 10 минут в рабочее время
+                            .modal-schedule
+                                span Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00
+                        .modal-body
+                            form.form(action="send.php")
+                                //- из какой формы на сайте
+                                input(type="hidden" name="subject" value="оставить заявку")
+                                //- проверка спама
+                                input(type="hidden" name="notspam" value="")
+
+                                .form__row
+                                    .form__label
+                                        label(for="tel") Введите номер телефона
+                                    input(type="tel" id="tel" name="tel" required placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _")
+
+                                .form__row
+                                    .button
+                                        button.btn.btn_warning.btn_horizon#btn_didisabled_js(type="submit")
+                                            span Позвоните мне
+                                .form__row
+                                    .form__privacy
+                                        label.form__check
+                                            input#check_checked(type="checkbox" checked="checked")
+                                            span Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a>
+            // End modal feedback
+
+
+            // Begin Modal info
+            .modal.modal-sm.fade.info#info
+                .modal-dialog
+                    .modal-content
+                        a(href="#" class="modal-close" data-dismiss="modal")
+                        .form__message
+            // End modal info
+
+            include scripts.pug

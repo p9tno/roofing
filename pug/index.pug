@@ -1,0 +1,50 @@
+extends layout/layout.pug
+
+block content
+
+    // begin first desktop
+    section#first.first.section
+        .container_center
+            .first__wrap
+
+                .first__bullets
+                    ul.bullets.hide
+                        li.bullets__item
+                            <span><b>Гарантия от 50 лет </b><br>на материалы и 5 лет на монтаж</span>
+                            .bullets__info.mobile Нажмите на плюсик, чтобы увидеть все преимущества работы с нами
+                        li.bullets__item
+                            <span><b>Замер, монтажный проект</b> и <br>еще 4 услуги бесплатно</span>
+                        li.bullets__item 
+                            <span><b>Сметы <br> точны</b> до копейки</span>
+                        li.bullets__item
+                            <span><b>Поэтапная оплата,</b><br>кредит или рассрочка</span>
+                        li.bullets__item
+                            <span><b>Наши крыши в каждом поселке</b><br>и дачном сообществе региона<span>
+                        .bullets__toggle.mobile
+                            i.icon-plus
+
+                .first__content
+                    h2.section__title
+                        <span>Продажа <b>кровельных материалов</b> в Тюмени и Тюменской области</span>
+
+                    .first__more
+                        .dots
+                            i
+                            i
+                            i
+                            i
+                        span и монтаж под ключ
+
+                    .first__action
+                        .first__desc
+                            <span><b>Ответьте на несколько вопросов и получите </b>сметную стоимость и 3 подарка за экономию нашего времени<span>
+                        .first__btn
+                            a(href="#").btn.btn_success
+                                span Рассчитать стоимость материалов и монтажа
+                            a(href="#").btn.btn_warning
+                                span записаться на просмотр объектов
+
+
+
+
+    // end firsr

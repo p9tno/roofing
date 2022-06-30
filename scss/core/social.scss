@@ -1,0 +1,90 @@
+.social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &__desc {
+        letter-spacing: 0.02em;
+
+        margin-bottom: 0.625em;
+        @media (min-width: 992px) {
+            margin-bottom: 1em;
+
+        }
+
+        span {
+            position: relative;
+            font-size: 0.5em;
+
+            @media (min-width: 992px) {
+                font-size: 0.75em;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0.45em;
+                left: -0.75em;
+
+                display: block;
+                width: 0.334em;
+                height: 0.334em;
+                border-radius: 50%;
+                background-color: $color_success;
+            }
+        }
+    }
+
+    &__item {
+        margin-right: 0.875em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color_white;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            width: 2.2em;
+            height: 2.2em;
+            font-size: 1.25em;
+
+            @media (min-width: 992px) {
+                transform: scale(1);
+                transition: transform 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            }
+
+        }
+    }
+
+}
+
+.icon-whatsapp {
+    background-color: #12C868;
+}
+
+.icon-viber {
+    background-color: #976FCC;
+
+}
+
+.icon-telegram {
+    background-color: #05A0EB;
+
+}

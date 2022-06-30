@@ -1,0 +1,46 @@
+header.header
+    .header__wrap
+        .header__content
+            .header__nav
+                nav.navbar#navbar
+                    ul.navbar__list
+                        li.navbar__item.current
+                            a.navbar__link(href="#")
+                                i.icon-home
+                        each item in ['каталог', 'Преимущества', 'Примеры работ', 'монтаж', 'отзывы', 'Ответы на вопросы', 'контакты']
+                            li.navbar__item
+                                a.navbar__link(href="#")=item
+            .header__bottom
+                .header__desc
+                    span <b>Кровельные и фасадные материалы</b> в Тюмени и области.<br class="desktop"><br class="desktop"> Профессиональный монтаж с 2010 года.
+                .header__price
+                    a(href="#").dotted Скачать прайс-каталог
+                .header__logo
+                    a.logo(href="/")
+                        img(src="/img/logo.png", alt="alt")
+                .header__social
+                    .social__desc
+                        span Отвечаем <b>онлайн</b>
+                    ul.social
+                        li.social__item
+                            a.social__link(href="https://wa.me/+375293085057" target="_blank")
+                                i.icon-whatsapp
+                        li.social__item
+                            a.social__link(href="viber://chat?number=%2B375293085057" target="_blank")
+                                i.icon-viber
+                        li.social__item
+                            a.social__link(href="https://telegram.im/plahotin_s" target="_blank")
+                                i.icon-telegram
+
+                .header__action
+                    .header__schedule
+                        b Пн-Пт 
+                        span 9:00 - 18:00, 
+                        b Сб 
+                        span 10:00 - 18:00
+                    .header__phone
+                        a(href="tel:+88002225460") 8 (800) 222-54-60
+                    .header__feedback
+                        // Button trigger modal feedback
+                        a(class="feedback__link dotted" data-toggle="modal" data-target="#feedback") Позвоните мне
+        .header__toggle

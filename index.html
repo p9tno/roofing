@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrap">
+          <div class="header__content">
+            <div class="header__nav">
+              <nav class="navbar" id="navbar">
+                <ul class="navbar__list">
+                  <li class="navbar__item current"><a class="navbar__link" href="#"><i class="icon-home"></i></a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">каталог</a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">Преимущества</a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">Примеры работ</a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">монтаж</a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">отзывы</a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">Ответы на вопросы</a></li>
+                  <li class="navbar__item"><a class="navbar__link" href="#">контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__bottom">
+              <div class="header__desc"><span><b>Кровельные и фасадные материалы</b> в Тюмени и области.<br class="desktop"><br class="desktop"> Профессиональный монтаж с 2010 года.</span></div>
+              <div class="header__price"><a class="dotted" href="#">Скачать прайс-каталог</a></div>
+              <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.png" alt="alt"/></a></div>
+              <div class="header__social">
+                <div class="social__desc"><span>Отвечаем <b>онлайн</b></span></div>
+                <ul class="social">
+                  <li class="social__item"><a class="social__link" href="https://wa.me/+375293085057" target="_blank"><i class="icon-whatsapp"></i></a></li>
+                  <li class="social__item"><a class="social__link" href="viber://chat?number=%2B375293085057" target="_blank"><i class="icon-viber"></i></a></li>
+                  <li class="social__item"><a class="social__link" href="https://telegram.im/plahotin_s" target="_blank"><i class="icon-telegram"></i></a></li>
+                </ul>
+              </div>
+              <div class="header__action">
+                <div class="header__schedule"><b>Пн-Пт </b><span>9:00 - 18:00, </span><b>Сб </b><span>10:00 - 18:00</span></div>
+                <div class="header__phone"><a href="tel:+88002225460">8 (800) 222-54-60</a></div>
+                <div class="header__feedback">
+                  <!-- Button trigger modal feedback--><a class="feedback__link dotted" data-toggle="modal" data-target="#feedback">Позвоните мне</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__toggle"></div>
+        </div>
+      </header>
+      <main class="main_content">
+        <!-- begin first desktop-->
+        <section class="first section" id="first">
+          <div class="container_center">
+            <div class="first__wrap">
+              <div class="first__bullets">
+                <ul class="bullets hide">
+                  <li class="bullets__item"><span><b>Гарантия от 50 лет </b><br>на материалы и 5 лет на монтаж</span>
+                    <div class="bullets__info mobile">Нажмите на плюсик, чтобы увидеть все преимущества работы с нами</div>
+                  </li>
+                  <li class="bullets__item"><span><b>Замер, монтажный проект</b> и <br>еще 4 услуги бесплатно</span></li>
+                  <li class="bullets__item">
+                     <span><b>Сметы <br> точны</b> до копейки</span></li>
+                  <li class="bullets__item"><span><b>Поэтапная оплата,</b><br>кредит или рассрочка</span></li>
+                  <li class="bullets__item"><span><b>Наши крыши в каждом поселке</b><br>и дачном сообществе региона<span></li>
+                  <div class="bullets__toggle mobile"><i class="icon-plus"></i></div>
+                </ul>
+              </div>
+              <div class="first__content">
+                <h2 class="section__title"><span>Продажа <b>кровельных материалов</b> в Тюмени и Тюменской области</span></h2>
+                <div class="first__more">
+                  <div class="dots"><i></i><i></i><i></i><i></i></div><span>и монтаж под ключ</span>
+                </div>
+                <div class="first__action">
+                  <div class="first__desc"><span><b>Ответьте на несколько вопросов и получите </b>сметную стоимость и 3 подарка за экономию нашего времени<span></div>
+                  <div class="first__btn"><a class="btn btn_success" href="#"><span>Рассчитать стоимость материалов и монтажа</span></a><a class="btn btn_warning" href="#"><span>записаться на просмотр объектов</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end firsr-->
+      </main>
+      <!-- Begin Modal feedback-->
+      <div class="modal fade feedback" id="feedback">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="modal-header">
+              <div class="modal-title"> <span>Быстро оставить заявку</span></div>
+              <div class="modal-subtitle"><span>Введите номер, мы позвоним вам в течение 10 минут в рабочее время</span></div>
+              <div class="modal-schedule"><span>Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00</span></div>
+            </div>
+            <div class="modal-body">
+              <form class="form" action="send.php">
+                <input type="hidden" name="subject" value="оставить заявку"/>
+                <input type="hidden" name="notspam" value=""/>
+                <div class="form__row">
+                  <div class="form__label">
+                    <label for="tel">Введите номер телефона</label>
+                  </div>
+                  <input type="tel" id="tel" name="tel" required="required" placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _"/>
+                </div>
+                <div class="form__row">
+                  <div class="button">
+                    <button class="btn btn_warning btn_horizon" id="btn_didisabled_js" type="submit"><span>Позвоните мне</span></button>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__privacy">
+                    <label class="form__check">
+                      <input id="check_checked" type="checkbox" checked="checked"/><span>Нажимая кнопку вы соглашаетесь  с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal feedback-->
+      <!-- Begin Modal info-->
+      <div class="modal modal-sm fade info" id="info">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+            <div class="form__message"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal info-->
+      <script src="js/jquery.js"></script>
+      <script src="js/form.js"></script>
+      <script src="js/modal.js"></script>
+      <script src="js/function.js?undefined"></script>
+    </div>
+  </body>
+</html>
